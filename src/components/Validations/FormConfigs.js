@@ -1,0 +1,102 @@
+export const mainUsersConfig = {
+  fields: {
+    referralId_main_user: {
+      label: 'Referral ID',
+      type: 'text',
+      required: true,
+      pattern: /^REF-[a-zA-Z0-9]{0,6}$/,
+      errorMessage: 'Referral ID can be  10 characters starting with "REF-" followed by  alphanumeric characters',
+      maxLength: 10,
+    },
+    name_main_user: {
+      label: 'Name',
+      type: 'text',
+      required: true,
+      pattern: /^[a-zA-Z]+( [a-zA-Z]+)?$/,
+      errorMessage: 'Name must contain only letters with one optional space between words',
+      maxLength: 100,
+    },
+    tradingId_main_user: {
+      label: 'Trading ID',
+      type: 'text',
+      required: true,
+      pattern: /^TV_[0-9]{1,5}$/,
+      errorMessage: 'Trading ID must start with "TV_" followed by 1-5 digits, max 8 characters',
+      maxLength: 8,
+    },
+    email_main_user: {
+      label: 'Email',
+      type: 'email',
+      required: true,
+      pattern: /^[a-zA-Z0-9]+(\.[a-zA-Z0-9]+)?@(gmail\.com|outlook\.com|astrolitetech\.com)$/,
+      errorMessage: 'Email must be alphanumeric with one optional dot before @, and use gmail.com, outlook.com, or astrolitetech.com',
+      maxLength: 100,
+    },
+    subscriberCount_main_user: {
+      label: 'Subscriber Count',
+      type: 'number',
+      required: true,
+      max: 9999,
+      errorMessage: 'Subscriber Count must be a number up to 9999',
+    },
+  },
+};
+
+export const demoPaidConfig = {
+  fields: {
+    referralId: {
+      label: 'Referral ID',
+      type: 'text',
+      required: true,
+      pattern: /^REF-[a-zA-Z0-9]{0,6}$/,
+      errorMessage: 'Referral ID can be  10 characters starting with "REF-" followed by  alphanumeric characters',
+      maxLength: 10,
+    },
+    name: {
+      label: 'Name',
+      type: 'text',
+      required: true,
+      pattern: /^[a-zA-Z]+( [a-zA-Z]+)?$/,
+      errorMessage: 'Name must contain only letters with one optional space between words',
+      maxLength: 100,
+    },
+    date: {
+      label: 'Date',
+      type: 'date',
+      required: true,
+      notFuture: true,
+      errorMessage: 'Date cannot be in the future',
+    },
+    tradingViewId: {
+      label: 'Trading View ID',
+      type: 'text',
+      required: true,
+      pattern: /^TV_[0-9]{1,5}$/,
+      errorMessage: 'Trading View ID must start with "TV_" followed by 1-5 digits, max 8 characters',
+      maxLength: 8,
+    },
+    phoneNumber: {
+      label: 'Phone Number',
+      type: 'tel',
+      required: true,
+      pattern: /^[6-9][0-9]{0,9}$/,
+      errorMessage: 'Phone number must start with 6-9 and contain up to 10 digits',
+      maxLength: 10,
+    },
+    email: {
+      label: 'Email ID',
+      type: 'email',
+      required: true,
+      pattern: /^[a-zA-Z0-9]+(\.[a-zA-Z0-9]+)?@(gmail\.com|outlook\.com|astrolitetech\.com)$/,
+      errorMessage: 'Email must be alphanumeric with one optional dot before @, and use gmail.com, outlook.com, or astrolitetech.com',
+      maxLength: 100,
+    },
+    expiryDate: {
+      label: 'Expiry Date',
+      type: 'date',
+      required: true,
+      notPast: true,
+      errorMessage: 'Expiry date cannot be in the past',
+    },
+  },
+};
