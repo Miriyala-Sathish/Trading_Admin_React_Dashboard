@@ -54,7 +54,7 @@ body {
 /* =============== Navigation ================ */
 .navigation {
     position: fixed;
-    width: 100px;
+    width: 300px;
     height: 100%;
     background: var(--blue);
     border-left: 10px solid var(--blue);
